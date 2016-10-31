@@ -57,6 +57,7 @@ gem 'redcarpet', '~> 3.3'
 
 
 group :development, :test do
+  gem 'better_errors'
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
   gem 'byebug'
   # Colored logs in console
