@@ -1,5 +1,6 @@
 module SnippetGirl
   class ComponentList
+    include Enumerable
 
     def initialize(snippet_components)
       @data = []
@@ -9,5 +10,9 @@ module SnippetGirl
         @data << klass_with_namespace.new(component['body'], component['order'])
       end
     end
+
+    def each(&block)
+      @data.each { |component| block.call(component) }
+    end 
   end
 end
