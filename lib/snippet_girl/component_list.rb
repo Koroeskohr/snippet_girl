@@ -1,16 +1,13 @@
 module SnippetGirl
   class ComponentList
-    def initialize(json)
-      parsed_data = JSON.parse(json)
-      raise SnippetGirl::FormatError unless parsed_data.is_a? Array
 
+    def initialize(snippet_components)
       @data = []
-      parsed_data.each do |component|
-        klass = component[:type].camelize.constantize
-        @data << klass.new(component[:body], component[:order])
+      snippet_components.each do |component|
+        klass_name = component['type'].camelize
+        klass_with_namespace = "SnippetGirl::Components::#{klass_name}".constantize
+        @data << klass_with_namespace.new(component['body'], component['order'])
       end
-    rescue JSON::ParserError
-
     end
   end
 end
