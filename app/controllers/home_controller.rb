@@ -5,6 +5,11 @@ class HomeController < ApplicationController
     end
   end
 
+  def test
+    @snippet = Snippet.first
+    @list = @snippet.components
+    byebug
+  end
 
   private
 
