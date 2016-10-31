@@ -29,5 +29,6 @@ module SnippetGirl
     end
 
     config.autoload_paths << "#{Rails.root}/app/serializers"
+    config.autoload_paths += Dir["#{config.root}/lib/"]
   end
 end
