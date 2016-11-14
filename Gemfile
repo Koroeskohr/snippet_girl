@@ -36,6 +36,8 @@ gem 'jbuilder', '~> 2.0'
 gem 'pg'
 
 # core gems
+gem 'cells-rails', '~> 0.0.6'
+gem 'cells-erb'
 gem 'devise', '~> 4.2'
 gem 'pundit', '~> 1.1'
 
@@ -82,6 +84,7 @@ group :test do
   # Great testing framework
   gem 'rspec'
   gem "rspec-rails"
+  gem "rspec-cells"
   
   # Allows easy resource generation for testing
   gem "factory_girl"
