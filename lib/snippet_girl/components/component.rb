@@ -13,7 +13,7 @@ module SnippetGirl
 
       def body
         raise NotImplementedError
-      end  
+      end
     end
   end
 end
