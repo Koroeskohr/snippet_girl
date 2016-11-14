@@ -6,12 +6,12 @@ module SnippetGirl
         @order = order
       end
 
-      def render
-        value.html_safe
-      end
-
       def value
         @content
+      end
+      
+      def render
+        value.html_safe
       end
     end
   end
