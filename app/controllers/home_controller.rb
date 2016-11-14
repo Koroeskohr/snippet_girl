@@ -1,6 +1,6 @@
 class HomeController < ApplicationController
   def index
-    if user_logged_in?
+    if user_signed_in?
       render_dashboard
     end
   end
