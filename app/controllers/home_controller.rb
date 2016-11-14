@@ -8,7 +8,6 @@ class HomeController < ApplicationController
   def test
     @snippet = Snippet.first
     @list = @snippet.components
-    byebug
   end
 
   private
