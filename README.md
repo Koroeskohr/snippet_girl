@@ -11,5 +11,5 @@ TODO :
 - [x] Add text component
 - [ ] Add code component
 - [ ] Add check list component
-- [ ] Think about more component types
+- [ ] Think about more component types
 - [ ] Create view models for all of those (with the Cells gem)
